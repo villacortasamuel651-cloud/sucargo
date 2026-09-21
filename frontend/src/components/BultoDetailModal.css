@@ -1,0 +1,177 @@
+.bulto-detail-card {
+  max-width: 560px;
+}
+
+.bulto-detail-layout {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.bulto-qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.bulto-estado-ABIERTO {
+  background: #eef1fd;
+  color: #3457d9;
+}
+
+.bulto-estado-CERRADO {
+  background: #e7f7ef;
+  color: #0e8a4c;
+}
+
+.bulto-imprimir-btn {
+  border: 1px solid #3457d9;
+  background: #fff;
+  color: #3457d9;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bulto-imprimir-btn:hover {
+  background: #eef1fd;
+}
+
+.bulto-peso-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bulto-peso-row input {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.bulto-peso-row input:disabled {
+  background: #f4f5f7;
+  color: #6b7280;
+}
+
+.bulto-productos-lista {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.bulto-producto-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #f4f6fb;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.bulto-producto-item span {
+  min-width: 0;
+}
+
+.bulto-producto-item button {
+  border: none;
+  background: none;
+  color: #b3261e;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bulto-producto-item button:hover {
+  text-decoration: underline;
+}
+
+.bulto-agregar-form {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.bulto-agregar-form select {
+  flex: 2;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  min-width: 0;
+}
+
+.bulto-agregar-form input {
+  flex: 1;
+  min-width: 55px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.bulto-agregar-form button {
+  border: 1px dashed #3457d9;
+  background: none;
+  color: #3457d9;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bulto-agregar-form button:hover {
+  background: #eef1fd;
+}
+
+.bulto-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  padding: 0.75rem 0.9rem;
+  background: #fff4f4;
+  border: 1px solid #f1c4c4;
+  border-radius: 8px;
+  color: #b3261e;
+  font-size: 0.82rem;
+}
+
+.bulto-error span {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bulto-error p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .bulto-detail-layout {
+    flex-direction: column;
+  }
+
+  .bulto-qr-panel {
+    padding-top: 0;
+  }
+
+  .bulto-agregar-form {
+    flex-wrap: wrap;
+  }
+
+  .bulto-agregar-form select {
+    flex-basis: 100%;
+  }
+}

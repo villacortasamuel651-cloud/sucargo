@@ -1,0 +1,334 @@
+/* SUCargo — Módulo Clientes
+   Usa la misma paleta e identidad definida en Login (morado + Space Grotesk). */
+
+:root {
+  --sc-ink: #181A20;
+  --sc-purple-1: #5B4FE0;
+  --sc-purple-2: #4338CA;
+  --sc-purple-dark: #372DB0;
+  --sc-purple-tint: #F1EFFD;
+  --sc-steel: #6b6f76;
+  --sc-border: #E5E3DD;
+  --sc-bg: #F7F6F3;
+  --sc-green: #1E8E5A;
+  --sc-green-bg: #E6F6EE;
+  --sc-red: #B23A2E;
+  --sc-red-bg: #FBEAE8;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--sc-bg);
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.clientes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.clientes-header h2 {
+  margin: 0;
+  color: var(--sc-ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.clientes-nuevo-btn {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--sc-purple-2);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clientes-nuevo-btn:hover {
+  background: var(--sc-purple-dark);
+  box-shadow: 0 6px 16px rgba(67, 56, 202, 0.3);
+}
+
+.clientes-main {
+  padding: 1.75rem;
+}
+
+/* ---------- Tarjetas de resumen ---------- */
+.clientes-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 8px 20px rgba(20, 24, 31, 0.08);
+  transform: translateY(-1px);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sc-steel);
+  font-weight: 600;
+}
+
+.stat-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--sc-ink);
+}
+
+.stat-value-green {
+  color: var(--sc-green);
+}
+
+/* ---------- Buscador + filtros ---------- */
+.clientes-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.clientes-buscador {
+  flex: 1;
+  min-width: 220px;
+  max-width: 340px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  font-size: 0.87rem;
+  background: #fff;
+  color: var(--sc-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clientes-buscador::placeholder {
+  color: #B7B2A4;
+}
+
+.clientes-buscador:focus {
+  outline: none;
+  border-color: var(--sc-purple-2);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
+}
+
+.clientes-filtros {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filtro-chip {
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--sc-border);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sc-steel);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.filtro-chip:hover {
+  border-color: var(--sc-purple-2);
+  color: var(--sc-purple-2);
+}
+
+.filtro-chip-activo {
+  background: var(--sc-purple-2);
+  border-color: var(--sc-purple-2);
+  color: #fff;
+}
+
+.filtro-chip-activo:hover {
+  color: #fff;
+}
+
+/* ---------- Avatar con inicial (columna Cliente en tabla) ---------- */
+.col-cliente {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.avatar-inicial {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.clientes-error {
+  color: var(--sc-red);
+}
+
+.clientes-vacio {
+  color: var(--sc-steel);
+}
+
+/* ---------- Tabla (desktop) ---------- */
+.clientes-table-wrap {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.clientes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clientes-table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sc-steel);
+  font-weight: 600;
+  padding: 0.9rem 1.25rem;
+  background: #FAFAF8;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.clientes-table tbody td {
+  padding: 0.95rem 1.25rem;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--sc-border);
+  color: var(--sc-ink);
+}
+
+.clientes-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.clientes-table tbody tr {
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clientes-table tbody tr:hover {
+  background: #FAFAF8;
+  box-shadow: inset 3px 0 0 var(--sc-purple-2);
+}
+
+.clientes-table tbody tr.fila-inactiva {
+  opacity: 0.55;
+}
+
+.col-nombre {
+  font-weight: 600;
+}
+
+.col-muted {
+  color: var(--sc-steel);
+}
+
+.tabla-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background: var(--sc-green-bg);
+  color: var(--sc-green);
+}
+
+.tabla-badge-inactivo {
+  background: #F1F2F5;
+  color: #8a8f98;
+}
+
+.tabla-acciones {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1px solid var(--sc-border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4b4e54;
+  font-size: 0.9rem;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: var(--sc-purple-tint);
+  border-color: var(--sc-purple-2);
+  color: var(--sc-purple-2);
+}
+
+.icon-btn-danger:hover {
+  background: var(--sc-red-bg);
+  border-color: var(--sc-red);
+  color: var(--sc-red);
+}
+
+/* ---------- Cards (mobile) ---------- */
+.clientes-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Regla de responsive: a partir de 860px se ve la tabla,
+   por debajo se ven las cards. Coordina con ClienteCard.css. */
+@media (max-width: 860px) {
+  .clientes-table-wrap {
+    display: none;
+  }
+  .clientes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .clientes-main {
+    padding: 1.25rem;
+  }
+}

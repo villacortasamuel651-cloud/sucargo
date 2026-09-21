@@ -1,0 +1,206 @@
+:root {
+  --iv-primary: #6366F1;
+  --iv-ink: #0F172A;
+  --iv-steel: #64748B;
+  --iv-border: #E2E8F0;
+  --iv-green: #15803D;
+  --iv-green-bg: #DCFCE7;
+  --iv-amber: #B45309;
+  --iv-amber-bg: #FEF3C7;
+  --iv-red: #B91C1C;
+  --iv-red-bg: #FEF2F2;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1.5rem;
+}
+
+.inv-detail-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.inv-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.inv-detail-header h2 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--iv-ink);
+}
+
+.inv-detail-cerrar {
+  border: 1.5px solid var(--iv-border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--iv-ink);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.inv-detail-cerrar:hover {
+  background: #EEF2FF;
+  border-color: var(--iv-primary);
+  color: var(--iv-primary);
+}
+
+/* ---- Tabs ---- */
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1.5px solid var(--iv-border);
+  margin-bottom: 1.2rem;
+}
+
+.tab {
+  padding: 0.5rem 0.1rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--iv-steel);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab.active {
+  color: var(--iv-primary);
+  border-color: var(--iv-primary);
+}
+
+.inv-detail-tab label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #475569;
+  margin: 0.9rem 0 0.3rem;
+}
+
+.inv-detail-tab label:first-of-type {
+  margin-top: 0;
+}
+
+.inv-detail-dato {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--iv-ink);
+  font-weight: 500;
+}
+
+.inv-detail-vacio {
+  color: var(--iv-steel);
+  font-size: 0.85rem;
+}
+
+/* ---- Grid de stock ---- */
+.inv-detail-stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+
+.inv-detail-stock-item {
+  background: #F8FAFC;
+  border: 1px solid var(--iv-border);
+  border-radius: 10px;
+  padding: 0.7rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.inv-detail-stock-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--iv-steel);
+  font-weight: 700;
+}
+
+.inv-detail-stock-valor {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--iv-ink);
+}
+
+/* ---- Badge de estado (mismo criterio que Inventario.css) ---- */
+.inv-estado-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+}
+
+.inv-estado-NORMAL { background: var(--iv-green-bg); color: var(--iv-green); }
+.inv-estado-BAJO_STOCK { background: var(--iv-amber-bg); color: var(--iv-amber); }
+.inv-estado-SIN_STOCK { background: var(--iv-red-bg); color: var(--iv-red); }
+
+/* Badge neutro para el tipo de movimiento — ajusta colores por tipo
+   real (ENTRADA/SALIDA/AJUSTE, etc.) cuando confirmes los valores exactos
+   que devuelve tu backend. */
+.inv-tipo-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 6px;
+  background: #EEF2FF;
+  color: var(--iv-primary);
+}
+
+/* ---- Tabla de movimientos ---- */
+.inv-mov-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.inv-mov-tabla th {
+  text-align: left;
+  color: var(--iv-steel);
+  font-weight: 700;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0 0 0.55rem;
+  border-bottom: 1.5px solid var(--iv-border);
+}
+
+.inv-mov-tabla td {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  color: var(--iv-ink);
+}
+
+.inv-mov-tabla tr:last-child td {
+  border-bottom: none;
+}

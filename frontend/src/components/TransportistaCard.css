@@ -1,0 +1,83 @@
+.transportista-card {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.transportista-card-inactivo {
+  opacity: 0.6;
+}
+
+.transportista-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.transportista-card-header h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #1c2128;
+}
+
+.transportista-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #e7f7ef;
+  color: #0e8a4c;
+}
+
+.transportista-badge-inactivo {
+  background: #f1f2f5;
+  color: #8a8f98;
+}
+
+.transportista-card-dato {
+  margin: 0;
+  font-size: 0.83rem;
+  color: #3a3d42;
+}
+
+.transportista-card-dato span {
+  color: #8a8f98;
+  margin-right: 0.35rem;
+}
+
+.transportista-card-acciones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.transportista-card-acciones button {
+  flex: 1;
+  padding: 0.45rem;
+  border-radius: 8px;
+  border: 1px solid #d7dae1;
+  background: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #1c2128;
+}
+
+.transportista-card-acciones button:hover {
+  background: #f4f6fb;
+}
+
+.transportista-card-desactivar {
+  color: #b3261e !important;
+  border-color: #f5cfcb !important;
+}
+
+.transportista-card-activar {
+  color: #0e8a4c !important;
+  border-color: #bfe6cf !important;
+}

@@ -1,0 +1,147 @@
+:root {
+  --pr-primary: #6366F1;
+  --pr-ink: #0F172A;
+  --pr-steel: #64748B;
+  --pr-border: #E2E8F0;
+  --pr-green: #15803D;
+  --pr-green-bg: #DCFCE7;
+  --pr-red: #B91C1C;
+  --pr-red-bg: #FEF2F2;
+}
+
+.producto-card {
+  background: #fff;
+  border: 1px solid var(--pr-border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.producto-card:hover {
+  box-shadow: 0 14px 30px -8px rgba(15, 23, 42, 0.15);
+  transform: translateY(-3px);
+}
+
+.producto-card-inactivo {
+  opacity: 0.6;
+}
+
+.producto-imagen {
+  height: 130px;
+  background: linear-gradient(135deg, #EEF2FF, #ECFEFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.producto-card-body {
+  padding: 1.1rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.producto-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.producto-card-header h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--pr-ink);
+}
+
+.producto-sku {
+  font-size: 0.72rem;
+  color: var(--pr-steel);
+  font-family: monospace;
+}
+
+.producto-badge {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--pr-green-bg);
+  color: var(--pr-green);
+  white-space: nowrap;
+}
+
+.producto-badge-inactivo {
+  background: #F1F5F9;
+  color: #94A3B8;
+}
+
+.producto-cat-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  background: #EEF2FF;
+  color: var(--pr-primary);
+}
+
+.producto-dato {
+  margin: 0;
+  font-size: 0.83rem;
+  color: #3a3d42;
+}
+
+.producto-dato span {
+  color: var(--pr-steel);
+  margin-right: 0.35rem;
+}
+
+.producto-card-acciones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.producto-card-acciones button {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 9px;
+  border: 1.5px solid var(--pr-border);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--pr-ink);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.producto-card-acciones button:hover {
+  border-color: var(--pr-primary);
+  color: var(--pr-primary);
+  background: #EEF2FF;
+}
+
+.producto-card-desactivar {
+  color: var(--pr-red) !important;
+  border-color: #FCA5A5 !important;
+}
+
+.producto-card-desactivar:hover {
+  background: var(--pr-red-bg) !important;
+  border-color: var(--pr-red) !important;
+  color: var(--pr-red) !important;
+}

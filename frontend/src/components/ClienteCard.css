@@ -1,0 +1,103 @@
+:root {
+  --sc-ink: #181A20;
+  --sc-purple-2: #4338CA;
+  --sc-steel: #6b6f76;
+  --sc-border: #E5E3DD;
+  --sc-green: #1E8E5A;
+  --sc-green-bg: #E6F6EE;
+  --sc-red: #B23A2E;
+  --sc-red-bg: #FBEAE8;
+}
+
+.cliente-card {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cliente-card-inactivo {
+  opacity: 0.6;
+}
+
+.cliente-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.cliente-card-header h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+}
+
+.cliente-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--sc-green-bg);
+  color: var(--sc-green);
+  white-space: nowrap;
+}
+
+.cliente-badge-inactivo {
+  background: #F1F2F5;
+  color: #8a8f98;
+}
+
+.cliente-card-dato {
+  margin: 0;
+  font-size: 0.83rem;
+  color: var(--sc-ink);
+  display: flex;
+  justify-content: space-between;
+}
+
+.cliente-card-dato span {
+  color: var(--sc-steel);
+  margin-right: 0.35rem;
+}
+
+.cliente-card-acciones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.cliente-card-acciones button {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--sc-border);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--sc-ink);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.cliente-card-acciones button:hover {
+  background: #F1EFFD;
+  border-color: var(--sc-purple-2);
+  color: var(--sc-purple-2);
+}
+
+.cliente-card-desactivar {
+  color: var(--sc-red) !important;
+  border-color: #F2D9D6 !important;
+}
+
+.cliente-card-desactivar:hover {
+  background: var(--sc-red-bg) !important;
+  border-color: var(--sc-red) !important;
+}

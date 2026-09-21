@@ -1,0 +1,56 @@
+.despacho-detail-card { max-width: 480px; }
+
+.despacho-estado-EN_VERIFICACION { background: #fdf1e0; color: #b5720f; }
+.despacho-estado-DESPACHADO { background: #e7f7ef; color: #0e8a4c; }
+
+.despacho-bultos-lista {
+  list-style: none;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.despacho-bulto-item {
+  background: #fdecec;
+  color: #b3261e;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.despacho-bulto-ok {
+  background: #e7f7ef;
+  color: #0e8a4c;
+}
+
+.despacho-verificar-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.despacho-verificar-form input {
+  flex: 1;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.despacho-verificar-form button {
+  border: none;
+  background: #3457d9;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.despacho-mensaje {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #3a3d42;
+}

@@ -1,0 +1,90 @@
+.usuarios-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.usuarios-nuevo-btn {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #3457d9;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.usuarios-header h2 {
+  margin: 0;
+  color: #1c2128;
+  font-size: 1.1rem;
+}
+
+.usuarios-main {
+  padding: 1.75rem;
+}
+
+.usuarios-error {
+  color: #b3261e;
+}
+
+.usuarios-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.usuarios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+.usuarios-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.usuarios-item:hover {
+  background: #f4f6fb;
+}
+
+.usuarios-item-activo {
+  background: #eef1fd;
+}
+
+.usuarios-item-nombre {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1c2128;
+}
+
+.usuarios-item-rol {
+  font-size: 0.72rem;
+  color: #8a8f98;
+}
+
+.usuarios-vacio {
+  color: #8a8f98;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #d7dae1;
+  border-radius: 10px;
+}

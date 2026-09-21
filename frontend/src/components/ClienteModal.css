@@ -1,0 +1,119 @@
+:root {
+  --sc-ink: #181A20;
+  --sc-purple-2: #4338CA;
+  --sc-purple-dark: #372DB0;
+  --sc-steel: #6b6f76;
+  --sc-border: #E5E3DD;
+  --sc-red: #B23A2E;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 26, 32, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 30px 80px rgba(20, 24, 31, 0.3);
+}
+
+.modal-card h2 {
+  margin: 0 0 1.25rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #3a3d42;
+  margin: 1rem 0 0.35rem;
+}
+
+.modal-form label:first-of-type {
+  margin-top: 0;
+}
+
+.modal-form input {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #FAF9F7;
+  color: var(--sc-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: var(--sc-purple-2);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
+  background: #fff;
+}
+
+.modal-error {
+  color: var(--sc-red);
+  font-size: 0.82rem;
+  margin: 0.75rem 0 0;
+}
+
+.modal-acciones {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.modal-acciones button {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.modal-cancelar {
+  border: 1px solid var(--sc-border);
+  background: #fff;
+  color: var(--sc-ink);
+}
+
+.modal-cancelar:hover {
+  background: #FAFAF8;
+}
+
+.modal-acciones button[type='submit'] {
+  border: none;
+  background: var(--sc-purple-2);
+  color: #ffffff;
+}
+
+.modal-acciones button[type='submit']:hover:not(:disabled) {
+  background: var(--sc-purple-dark);
+}
+
+.modal-acciones button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

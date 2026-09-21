@@ -1,0 +1,121 @@
+.usuario-detail {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.usuario-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.usuario-detail-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1c2128;
+}
+
+.usuario-detail-email {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: #8a8f98;
+}
+
+.usuario-detail-cerrar {
+  border: 1px solid #d7dae1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #3a3d42;
+}
+
+.usuario-tab-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+.usuario-tab-section label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3a3d42;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.usuario-tab-section label:first-of-type {
+  margin-top: 0;
+}
+
+.usuario-tab-section input,
+.usuario-tab-section select {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.usuario-tab-section input:disabled {
+  background: #f4f6fb;
+  color: #8a8f98;
+}
+
+.usuario-dato-readonly {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #1c2128;
+}
+
+.usuario-hint {
+  font-size: 0.78rem;
+  color: #8a8f98;
+  margin: 0.4rem 0 0;
+}
+
+.usuario-badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #e7f7ef;
+  color: #0e8a4c;
+}
+
+.usuario-badge-inactivo {
+  background: #f1f2f5;
+  color: #8a8f98;
+}
+
+.usuario-btn-primario,
+.usuario-btn-peligro {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.usuario-btn-primario {
+  background: #3457d9;
+  color: #ffffff;
+}
+
+.usuario-btn-peligro {
+  background: #fdecec;
+  color: #b3261e;
+}
+
+.usuario-btn-primario:disabled,
+.usuario-btn-peligro:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,53 @@
+.pedido-modal-card {
+  max-width: 460px;
+}
+
+.pedido-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pedido-item-linea {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pedido-item-linea select {
+  flex: 2;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.83rem;
+}
+
+.pedido-item-linea input {
+  flex: 1;
+  min-width: 60px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d7dae1;
+  border-radius: 8px;
+  font-size: 0.83rem;
+}
+
+.pedido-item-quitar {
+  border: none;
+  background: none;
+  color: #b3261e;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 0.2rem;
+}
+
+.pedido-agregar-linea {
+  margin-top: 0.6rem;
+  align-self: flex-start;
+  border: 1px dashed #d7dae1;
+  background: none;
+  color: #3457d9;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

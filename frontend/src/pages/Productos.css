@@ -1,0 +1,239 @@
+:root {
+  --pr-primary: #6366F1;
+  --pr-primary-hover: #4F46E5;
+  --pr-cyan: #06B6D4;
+  --pr-ink: #0F172A;
+  --pr-steel: #64748B;
+  --pr-border: #E2E8F0;
+  --pr-green: #15803D;
+  --pr-green-bg: #DCFCE7;
+  --pr-red: #B91C1C;
+  --pr-red-bg: #FEF2F2;
+}
+
+.productos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid var(--pr-border);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.productos-header h2 {
+  margin: 0;
+  color: var(--pr-ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.productos-header-acciones {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn-secondary {
+  padding: 0.6rem 1.1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--pr-primary);
+  background: #fff;
+  color: var(--pr-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: #EEF2FF;
+}
+
+.btn-primary {
+  padding: 0.6rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, var(--pr-primary), var(--pr-primary-hover));
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  box-shadow: 0 8px 16px -4px rgba(99, 102, 241, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px -4px rgba(99, 102, 241, 0.5);
+}
+
+.productos-main {
+  padding: 1.75rem;
+}
+
+.productos-error {
+  color: var(--pr-red);
+}
+
+.productos-vacio {
+  color: var(--pr-steel);
+}
+
+/* ---------- Stats de resumen ---------- */
+.productos-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--pr-border);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--stat-color, var(--pr-primary));
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--pr-steel);
+  font-weight: 700;
+}
+
+.stat-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--pr-ink);
+}
+
+/* ---------- Buscador + chips de categoría ---------- */
+.productos-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.productos-buscador {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--pr-border);
+  background: #fff;
+  font-size: 0.87rem;
+  color: var(--pr-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.productos-buscador::placeholder {
+  color: #94A3B8;
+}
+
+.productos-buscador:focus {
+  outline: none;
+  border-color: var(--pr-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.productos-cat-filtros {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cat-chip {
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--pr-border);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pr-steel);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.cat-chip:hover {
+  border-color: var(--pr-primary);
+  color: var(--pr-primary);
+}
+
+.cat-chip-activo {
+  background: var(--pr-primary);
+  border-color: var(--pr-primary);
+  color: #fff;
+}
+
+.cat-chip-activo:hover {
+  color: #fff;
+}
+
+/* ---------- Grid ---------- */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+/* Card fantasma "Agregar producto", visualmente coherente con ProductoCard.css */
+.producto-card-agregar {
+  min-height: 260px;
+  border: 1.5px dashed var(--pr-border);
+  border-radius: 16px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: #94A3B8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.producto-card-agregar:hover {
+  border-color: var(--pr-primary);
+  color: var(--pr-primary);
+  background: #EEF2FF;
+}
+
+.producto-card-agregar-icono {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+}

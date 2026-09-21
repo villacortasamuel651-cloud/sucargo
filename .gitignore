@@ -1,0 +1,42 @@
+﻿# =========================
+# SISTEMA OPERATIVO
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / EDITORES
+# =========================
+.idea/
+.vscode/
+*.iml
+
+# =========================
+# JAVA / MAVEN
+# =========================
+**/target/
+*.class
+
+# =========================
+# NODE / REACT
+# =========================
+**/node_modules/
+**/dist/
+
+# =========================
+# VARIABLES DE ENTORNO
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# LOGS
+# =========================
+*.log
+logs/
+
+# =========================
+# CONFIGURACION LOCAL BACKEND
+# =========================
+backend/src/main/resources/application.properties

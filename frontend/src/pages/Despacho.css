@@ -1,0 +1,76 @@
+.despacho-header { padding: 1.25rem 1.75rem; background: #fff; border-bottom: 1px solid #e4e7ec; }
+.despacho-header h2 { margin: 0; color: #1c2128; font-size: 1.1rem; }
+.despacho-main { padding: 1.75rem; }
+.despacho-error { color: #b3261e; }
+
+.despacho-section { margin-bottom: 2rem; }
+.despacho-section h3 { margin: 0 0 1rem; font-size: 0.95rem; color: #1c2128; }
+
+.despacho-vacio {
+  color: #8a8f98;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #d7dae1;
+  border-radius: 10px;
+}
+
+.despacho-listos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.despacho-listo-card {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.despacho-listo-card span { font-size: 0.8rem; color: #6b7280; }
+
+.despacho-listo-card button {
+  margin-top: 0.6rem;
+  border: none;
+  background: #3457d9;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.despacho-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.despacho-tabla th {
+  text-align: left;
+  color: #8a8f98;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e4e7ec;
+  background: #f9fafc;
+}
+
+.despacho-tabla td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #f1f2f5;
+  color: #1c2128;
+}
+
+.despacho-fila { cursor: pointer; }
+.despacho-fila:hover { background: #f4f6fb; }

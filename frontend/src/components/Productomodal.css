@@ -1,0 +1,147 @@
+:root {
+  --pr-primary: #6366F1;
+  --pr-primary-hover: #4F46E5;
+  --pr-ink: #0F172A;
+  --pr-steel: #64748B;
+  --pr-border: #E2E8F0;
+  --pr-red: #B91C1C;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1.5rem;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.9rem;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.modal-card h2 {
+  margin: 0 0 1.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pr-ink);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #475569;
+  margin: 0.9rem 0 0.35rem;
+}
+
+.modal-form label:first-of-type {
+  margin-top: 0;
+}
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--pr-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: #F8FAFC;
+  color: var(--pr-ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+  outline: none;
+  border-color: var(--pr-primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* Zona de imagen — placeholder visual hasta conectar backend de subida */
+.imagen-upload-placeholder {
+  margin-top: 0.9rem;
+  border: 1.5px dashed var(--pr-border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: #94A3B8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: #F8FAFC;
+  cursor: not-allowed;
+}
+
+.imagen-upload-icono {
+  font-size: 1.3rem;
+}
+
+.modal-error {
+  color: var(--pr-red);
+  font-size: 0.82rem;
+  margin: 0.85rem 0 0;
+}
+
+.modal-acciones {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.modal-acciones button {
+  flex: 1;
+  padding: 0.68rem;
+  border-radius: 10px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.modal-cancelar {
+  background: #fff;
+  border: 1.5px solid var(--pr-border);
+  color: var(--pr-ink);
+}
+
+.modal-cancelar:hover {
+  background: #F8FAFC;
+}
+
+.modal-acciones button[type='submit'] {
+  border: none;
+  background: linear-gradient(135deg, var(--pr-primary), var(--pr-primary-hover));
+  color: #fff;
+}
+
+.modal-acciones button[type='submit']:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.modal-acciones button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

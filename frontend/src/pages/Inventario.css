@@ -1,0 +1,222 @@
+:root {
+  --iv-primary: #6366F1;
+  --iv-primary-hover: #4F46E5;
+  --iv-cyan: #06B6D4;
+  --iv-ink: #0F172A;
+  --iv-steel: #64748B;
+  --iv-border: #E2E8F0;
+  --iv-green: #15803D;
+  --iv-green-bg: #DCFCE7;
+  --iv-amber: #B45309;
+  --iv-amber-bg: #FEF3C7;
+  --iv-red: #B91C1C;
+  --iv-red-bg: #FEF2F2;
+}
+
+.inventario-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid var(--iv-border);
+}
+
+.inventario-header h2 {
+  margin: 0;
+  color: var(--iv-ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.inventario-nuevo-btn {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--iv-primary), var(--iv-primary-hover));
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 16px -4px rgba(99, 102, 241, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inventario-nuevo-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px -4px rgba(99, 102, 241, 0.5);
+}
+
+.inventario-main {
+  padding: 1.75rem;
+}
+
+/* Mismas clases que usa Dashboard.jsx (dashboard-stats / dashboard-stat-card).
+   Se replican aquí para que las stat cards se vean bien sin depender de que
+   Dashboard.css ya esté cargado en el navegador por una visita anterior. */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.75rem;
+}
+
+.dashboard-stat-card {
+  background: #fff;
+  border: 1px solid var(--iv-border);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.dashboard-stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--stat-color, var(--iv-primary));
+}
+
+.dashboard-stat-card:hover {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.dashboard-stat-valor {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--iv-ink);
+  line-height: 1.1;
+}
+
+.dashboard-stat-label {
+  font-size: 0.76rem;
+  color: var(--iv-steel);
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.inventario-error {
+  color: var(--iv-red);
+}
+
+.inventario-vacio {
+  color: var(--iv-steel);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: #fff;
+  border: 1.5px dashed var(--iv-border);
+  border-radius: 14px;
+}
+
+/* ---------- Filtros ---------- */
+.inventario-filtros {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 1.75rem 0 1.25rem;
+}
+
+.inventario-filtros input,
+.inventario-filtros select {
+  padding: 0.62rem 0.8rem;
+  border: 1.5px solid var(--iv-border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  background: #fff;
+  color: var(--iv-ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inventario-filtros input:focus,
+.inventario-filtros select:focus {
+  outline: none;
+  border-color: var(--iv-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.inventario-filtros input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.inventario-filtros select {
+  cursor: pointer;
+}
+
+/* ---------- Tabla ---------- */
+.inventario-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1.5px solid var(--iv-border);
+  border-radius: 14px;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.inventario-tabla th {
+  text-align: left;
+  color: var(--iv-steel);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1.5px solid var(--iv-border);
+  background: #F8FAFC;
+}
+
+.inventario-tabla td {
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: var(--iv-ink);
+}
+
+.inventario-tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.inventario-fila {
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inventario-fila:hover {
+  background: #F8FAFC;
+  box-shadow: inset 3px 0 0 var(--iv-primary);
+}
+
+/* ---------- Badges de estado ---------- */
+.inv-estado-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.inv-estado-NORMAL {
+  background: var(--iv-green-bg);
+  color: var(--iv-green);
+}
+
+.inv-estado-BAJO_STOCK {
+  background: var(--iv-amber-bg);
+  color: var(--iv-amber);
+}
+
+.inv-estado-SIN_STOCK {
+  background: var(--iv-red-bg);
+  color: var(--iv-red);
+}

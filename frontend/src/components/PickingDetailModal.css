@@ -1,0 +1,50 @@
+.picking-detail-card {
+  max-width: 620px;
+}
+
+.picking-estado-PENDIENTE { background: #eef1fd; color: #3457d9; }
+.picking-estado-EN_PROCESO { background: #fdf1e0; color: #b5720f; }
+.picking-estado-COMPLETADO { background: #e7f7ef; color: #0e8a4c; }
+.picking-estado-COMPLETADO_CON_INCIDENCIAS { background: #fdecec; color: #b3261e; }
+
+.picking-lineas-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.picking-lineas-tabla th {
+  text-align: left;
+  color: #8a8f98;
+  font-weight: 600;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  padding: 0 0.4rem 0.5rem 0;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.picking-lineas-tabla td {
+  padding: 0.45rem 0.4rem 0.45rem 0;
+  border-bottom: 1px solid #f1f2f5;
+  color: #1c2128;
+}
+
+.picking-lineas-tabla input {
+  width: 70px;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #d7dae1;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.picking-guardar-linea {
+  border: none;
+  background: #eef1fd;
+  color: #3457d9;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+  white-space: nowrap;
+}

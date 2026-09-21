@@ -1,0 +1,320 @@
+:root {
+  --sc-ink: #181A20;
+  --sc-purple-1: #5B4FE0;
+  --sc-purple-2: #4338CA;
+  --sc-purple-dark: #372DB0;
+  --sc-purple-tint: #F1EFFD;
+  --sc-cyan: #22D3EE;
+  --sc-steel: #6b6f76;
+  --sc-border: #E5E3DD;
+  --sc-bg: #F7F6F3;
+  --sc-green: #1E8E5A;
+  --sc-green-bg: #E6F6EE;
+  --sc-amber: #B0770B;
+  --sc-amber-bg: #FBF1DE;
+  --sc-red: #B23A2E;
+  --sc-red-bg: #FBEAE8;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--sc-bg);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.dashboard-header-empresa {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--sc-steel);
+  font-weight: 500;
+}
+
+.dashboard-header-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dashboard-user-nombre {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+}
+
+.dashboard-user-rol {
+  font-size: 0.68rem;
+  color: var(--sc-purple-2);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dashboard-logout {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sc-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.dashboard-logout:hover {
+  background: var(--sc-red-bg);
+  border-color: var(--sc-red);
+  color: var(--sc-red);
+}
+
+/* ---------- Main ---------- */
+.dashboard-main {
+  padding: 2rem 1.75rem;
+}
+
+.dashboard-main h2 {
+  margin: 0 0 0.35rem;
+  color: var(--sc-ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dashboard-subtitle {
+  color: var(--sc-steel);
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Stat cards ---------- */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 0 0 2rem;
+  max-width: 720px;
+}
+
+.dashboard-stat-card {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.dashboard-stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--stat-color, var(--sc-purple-2));
+}
+
+.dashboard-stat-card:hover {
+  box-shadow: 0 10px 24px rgba(20, 24, 31, 0.08);
+  transform: translateY(-2px);
+}
+
+.dashboard-stat-valor {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--sc-ink);
+  line-height: 1.1;
+}
+
+.dashboard-stat-label {
+  font-size: 0.78rem;
+  color: var(--sc-steel);
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+/* ---------- Grid de secciones ---------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.dashboard-section {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  margin-top: 1.75rem;
+}
+
+.dashboard-grid .dashboard-section {
+  margin-top: 0;
+}
+
+.dashboard-section h3 {
+  margin: 0 0 1.1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+}
+
+.dashboard-vacio {
+  color: var(--sc-steel);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ---------- Tabla pedidos recientes ---------- */
+.dashboard-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.dashboard-tabla th {
+  text-align: left;
+  color: var(--sc-steel);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 0 0.6rem;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.dashboard-tabla td {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #F1EFE9;
+  color: var(--sc-ink);
+}
+
+.dashboard-tabla tr:last-child td {
+  border-bottom: none;
+}
+
+/* Badge de estado — color según el valor real que venga del backend.
+   Si tu prop de estado no coincide con estos strings exactos, dime
+   los valores reales (p.ej. "STOCK_RESERVADO", "SIN_STOCK", "DESPACHADO")
+   y ajusto el mapeo en Dashboard.jsx. */
+.dashboard-estado-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--sc-purple-tint);
+  color: var(--sc-purple-2);
+  white-space: nowrap;
+}
+
+.dashboard-estado-badge.estado-ok {
+  background: var(--sc-green-bg);
+  color: var(--sc-green);
+}
+
+.dashboard-estado-badge.estado-alerta {
+  background: var(--sc-amber-bg);
+  color: var(--sc-amber);
+}
+
+.dashboard-estado-badge.estado-critico {
+  background: var(--sc-red-bg);
+  color: var(--sc-red);
+}
+
+/* ---------- Alertas operativas ---------- */
+.dashboard-alertas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dashboard-alerta-item {
+  background: var(--sc-red-bg);
+  color: var(--sc-red);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--sc-red);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---------- Acciones rápidas ---------- */
+.dashboard-acciones {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-accion-btn {
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sc-ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.dashboard-accion-btn:hover {
+  background: var(--sc-purple-tint);
+  border-color: var(--sc-purple-2);
+  color: var(--sc-purple-2);
+}
+
+/* La primera acción ("+ Nuevo cliente") destaca como primaria */
+.dashboard-acciones .dashboard-accion-btn:first-child {
+  background: var(--sc-purple-2);
+  border-color: var(--sc-purple-2);
+  color: #fff;
+}
+
+.dashboard-acciones .dashboard-accion-btn:first-child:hover {
+  background: var(--sc-purple-dark);
+  border-color: var(--sc-purple-dark);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

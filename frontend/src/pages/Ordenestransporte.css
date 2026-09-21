@@ -1,0 +1,304 @@
+.ot-header {
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.ot-header h2 {
+  margin: 0;
+  color: #1c2128;
+  font-size: 1.1rem;
+}
+
+.ot-main {
+  padding: 1.75rem;
+}
+
+.ot-error {
+  color: #b3261e;
+}
+
+.ot-nota {
+  color: #8a8f98;
+  font-size: 0.83rem;
+  margin: 0 0 1.25rem;
+}
+
+.ot-vacio {
+  color: #8a8f98;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #d7dae1;
+  border-radius: 10px;
+}
+
+/* =========================
+   TABLA
+   ========================= */
+
+.ot-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.ot-tabla th {
+  text-align: left;
+  color: #8a8f98;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e4e7ec;
+  background: #f9fafc;
+}
+
+.ot-tabla td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f1f2f5;
+  color: #1c2128;
+}
+
+.ot-tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Filas clickeables */
+
+.ot-fila {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.ot-fila:hover {
+  background: #f8f9fd;
+}
+
+.ot-numero {
+  color: #3457d9;
+  font-size: 0.84rem;
+}
+
+/* =========================
+   ESTADOS
+   ========================= */
+
+.ot-estado-EMITIDA {
+  background: #eef1fd;
+  color: #3457d9;
+}
+
+.ot-estado-ANULADA {
+  background: #f1f2f5;
+  color: #8a8f98;
+}
+
+/* =========================
+   BOTÓN ANULAR
+   ========================= */
+
+.ot-anular-btn {
+  border: 1px solid #f1c7c4;
+  background: #fff5f4;
+  color: #b3261e;
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ot-anular-btn:hover {
+  background: #fde8e6;
+  border-color: #e7aaa6;
+}
+
+/* =========================
+   MODAL
+   ========================= */
+
+.ot-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 25, 35, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.ot-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   CABECERA DEL MODAL
+   ========================= */
+
+.ot-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.25rem 1.4rem;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.ot-modal-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #8a8f98;
+  font-size: 0.72rem;
+}
+
+.ot-modal-header h3 {
+  margin: 0;
+  color: #1c2128;
+  font-size: 1.15rem;
+}
+
+.ot-modal-cerrar {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+}
+
+.ot-modal-cerrar:hover {
+  color: #1c2128;
+}
+
+/* =========================
+   ESTADO
+   ========================= */
+
+.ot-modal-estado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.4rem;
+  background: #f9fafc;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.ot-modal-estado > span:first-child {
+  color: #8a8f98;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* =========================
+   DETALLE
+   ========================= */
+
+.ot-detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  padding: 1.25rem 1.4rem;
+}
+
+.ot-detalle-seccion {
+  padding: 0.95rem;
+  border: 1px solid #e8eaf0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.ot-detalle-seccion h4 {
+  margin: 0 0 0.8rem;
+  color: #1c2128;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.ot-detalle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.ot-detalle-item:last-child {
+  margin-bottom: 0;
+}
+
+.ot-detalle-item span,
+.ot-detalle-datos span {
+  color: #8a8f98;
+  font-size: 0.7rem;
+}
+
+.ot-detalle-item strong,
+.ot-detalle-datos strong {
+  color: #1c2128;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Datos numéricos */
+
+.ot-detalle-datos {
+  display: flex;
+  gap: 2rem;
+}
+
+.ot-detalle-datos > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.ot-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1.4rem;
+  border-top: 1px solid #e4e7ec;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 650px) {
+  .ot-main {
+    padding: 1rem;
+  }
+
+  .ot-tabla {
+    font-size: 0.78rem;
+  }
+
+  .ot-tabla th,
+  .ot-tabla td {
+    padding: 0.6rem;
+  }
+
+  .ot-detalle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ot-modal {
+    max-height: 95vh;
+  }
+}
