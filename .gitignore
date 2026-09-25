@@ -40,3 +40,5 @@ logs/
 # CONFIGURACION LOCAL BACKEND
 # =========================
 backend/src/main/resources/application.properties
+.env
+backup-full.sql
