@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './AlmacenModal.css';
+import './Almacenmodal.css';
 
 const VACIO = { nombre: '', direccion: '' };
 

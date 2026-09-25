@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { crearCategoria } from '../services/productos';
-import './ProductoModal.css';
+import './Productomodal.css';
 import './CategoriaManagerModal.css';
 
 export default function CategoriaManagerModal({ categorias, onCategoriaCreada, onCerrar }) {

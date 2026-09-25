@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './ProductoModal.css';
+import './Productomodal.css';
 
 const VACIO = {
   sku: '', nombre: '', descripcion: '', categoriaId: '',
