@@ -1,5 +1,5 @@
-import './ProductoModal.css';
-import './ProductoDetailModal.css';
+import './Productomodal.css';
+import './Productodetailmodal.css';
 
 export default function ProductoDetailModal({ producto, onEditar, onDesactivar, onCerrar }) {
   const inactivo = producto.estado === 'INACTIVO';

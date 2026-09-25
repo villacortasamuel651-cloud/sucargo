@@ -5,8 +5,8 @@ import {
   listarOrdenes,
   obtenerOrden,
   anularOrden
-} from '../services/ordenesTransporte';
-import './OrdenesTransporte.css';
+} from '../services/ordenestransporte';
+import './Ordenestransporte.css';
 
 const ROLES_EJECUTORES = ['LOGISTICA', 'DESPACHO'];
 

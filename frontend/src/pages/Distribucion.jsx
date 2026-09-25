@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import DistribucionModal from '../components/DistribucionModal';
-import DistribucionDetailModal from '../components/DistribucionDetailModal';
+import DistribucionDetailModal from '../components/Distribuciondetailmodal';
 import { useAuth } from '../context/AuthContext';
 import {
   listarDistribuciones,
@@ -10,7 +10,7 @@ import {
   eliminarDistribucion
 } from '../services/distribucion';
 import './Distribucion.css';
-import '../components/DistribucionDetailModal.css';
+import '../components/Distribuciondetailmodal.css';
 
 const ROLES_EJECUTORES = ['LOGISTICA', 'DESPACHO'];
 

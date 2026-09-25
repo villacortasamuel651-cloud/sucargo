@@ -8,7 +8,7 @@ import {
   generarOrdenesTransporte,
 } from '../services/distribucion';
 import './ClienteDetailModal.css';
-import './DistribucionDetailModal.css';
+import './Distribuciondetailmodal.css';
 
 const ROLES_EJECUTORES = ['LOGISTICA', 'DESPACHO'];
 
