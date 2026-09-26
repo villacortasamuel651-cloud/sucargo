@@ -1,0 +1,22 @@
+# Datasource
+# En Docker estos valores los sobreescribe docker-compose.yml (SPRING_DATASOURCE_*).
+# Para correr el backend fuera de Docker, usa localhost:3307 (el puerto que expone el contenedor de MySQL).
+spring.datasource.url=jdbc:mysql://localhost:3307/Sucargo?useSSL=false&serverTimezone=America/Lima&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=CAMBIA_ESTO
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# JWT
+# En Docker esto lo sobreescribe la variable JWT_SECRET del .env / docker-compose.yml.
+jwt.secret=CAMBIA_ESTO_POR_UN_SECRETO_LARGO_Y_RANDOM_DE_AL_MENOS_256_BITS
+jwt.access-token-expiration-ms=900000
+jwt.refresh-token-expiration-ms=604800000
+
+# Swagger
+springdoc.swagger-ui.path=/swagger-ui.html
