@@ -13,7 +13,7 @@ import Picking from './pages/Picking';
 import Packing from './pages/Packing';
 import Transportistas from './pages/Transportistas';
 import Distribucion from './pages/Distribucion';
-import OrdenesTransporte from './pages/OrdenesTransporte';
+import OrdenesTransporte from "./pages/Ordenestransporte";
 import Despacho from './pages/Despacho';
 
 function App() {

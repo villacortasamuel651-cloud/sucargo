@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import UsuarioDetail from '../components/UsuarioDetail';
-import UsuarioModal from '../components/UsuarioModal';
+import UsuarioModal from '../components/Usuariomodal';
 import { useAuth } from '../context/AuthContext';
 import { listarUsuarios } from '../services/usuarios';
 import './Usuarios.css';

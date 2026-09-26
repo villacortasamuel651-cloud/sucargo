@@ -42,6 +42,7 @@ public class SecurityConfig {
                     "/v3/api-docs.yaml"
                 ).permitAll()
                 // Todo lo demás requiere JWT válido
+                .requestMatchers("/api/superadmin/**").hasRole("ADMIN_SUC")
                 .anyRequest().authenticated()
             )
 

@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Sidebar from '../components/Sidebar';
 import ProductoCard from '../components/ProductoCard';
 import ProductoModal from '../components/ProductoModal';
-import ProductoDetailModal from '../components/ProductoDetailModal';
+import ProductoDetailModal from '../components/Productodetailmodal';
 import CategoriaManagerModal from '../components/CategoriaManagerModal';
 import { useAuth } from '../context/AuthContext';
 import {
